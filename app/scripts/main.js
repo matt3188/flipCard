@@ -64,6 +64,19 @@ $(function(){
     $(this).addClass(activeClass);
 
     var data = $(this).find('.icon').attr('data-icon');
+
+    if($cardContainer.find('.card.flipped').length > 1) {
+      setTimeout(function() {
+
+        var thisCard = $('.card.flipped .icon[data-icon='+data+']');
+        if(thisCard.length > 1) {
+          thisCard.parents('.card').addClass('found');
+        } else {
+          $card.removeClass('flipped');
+        }
+
+      }, 500);
+    }
   });
 
 });
