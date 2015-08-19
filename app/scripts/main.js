@@ -54,4 +54,12 @@ $(function(){
     .appendTo('#card-container');
   }
 
+  var activeClass = 'flipped',
+      $cardContainer = $('#card-container'),
+      $card = $('.card');
+
+  $card.on('click', function(e) {
+    e.preventDefault();
+  });
+
 });
