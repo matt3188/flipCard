@@ -1,0 +1,22 @@
+/**
+ * @font-face mixin
+ * Add a custom font in one line!
+ *
+ * Usage:
+ * @include fontface('family', 'fonts/', 'myfontname');
+ */
+
+@mixin fontface($font-family, $font-url, $font-name, $weight: normal, $style: normal) {
+  @font-face {
+    font: {
+      family: $font-family;
+      style: $style;
+      weight: $weight;
+    }
+    src: url($font-url + '/' + $font-name + '.eot');
+    src: url($font-url + '/' + $font-name + '.eot#iefix') format('embedded-opentype'),
+         url($font-url + '/' + $font-name + '.woff') format('woff'),
+         url($font-url + '/' + $font-name + '.ttf')  format('truetype'),
+         url($font-url + '/' + $font-name + '.svg#' + $font-name) format('svg');
+  }
+}
