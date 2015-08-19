@@ -51,12 +51,16 @@
 }
 
 .back {
+  display: table;
   transform: rotateY(180deg);
   background-color: #439;
   padding: 20px 40px;
 }
 
 .icon {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
   color: #FFF;
 
   &:before {
