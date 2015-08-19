@@ -25,4 +25,28 @@ $(function(){
     }
     return array;
   }
+
+  // 8 pairs
+  var level = 8,
+      i,
+      obj = [];
+
+  for(i = 0; i < level; i++) {
+    obj.push(i);
+  }
+
+  var shu = shuffle($.merge(obj, obj)),
+      cardSize = 100/Math.sqrt(shu.length);
+
+  for(i = 0; i < shu.length; i++) {
+    $('<div class="card" style="width:'+cardSize+'%; height:'+cardSize+'%;">' +
+        '<div class="flipper">' +
+          '<div class="front"></div>' +
+          '<div class="back">' +
+            '<i class="glyphicon glyphicon-plus"></i>' +
+          '</div>' +
+        '</div>' +
+      '</div>').appendTo('#card-container');
+  }
+
 });
