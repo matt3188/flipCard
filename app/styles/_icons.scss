@@ -1,0 +1,36 @@
+/**
+ * Icons
+ */
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+
+  font-variant: normal;
+  text-transform: none;
+
+  line-height: 1em;
+
+  margin-left: .2em;
+
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-00:before { content: '\e801'; }
+.icon-01:before { content: '\e802'; }
+.icon-02:before { content: '\e803'; }
+.icon-03:before { content: '\e800'; }
+.icon-05:before { content: '\e804'; }
+.icon-04:before { content: '\e805'; }
+.icon-06:before { content: '\e806'; }
+.icon-07:before { content: '\e807'; }
