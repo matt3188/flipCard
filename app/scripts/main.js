@@ -47,7 +47,7 @@ $(function(){
         '<div class="flipper">' +
           '<div class="front"></div>' +
           '<div class="back">' +
-            '<i class="icon icon-' + icon + '"></i>' +
+            '<i class="icon icon-' + icon + '" data-icon="' + icon + '"></i>' +
           '</div>' +
         '</div>' +
       '</div>')
