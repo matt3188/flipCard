@@ -10,3 +10,7 @@ console.log('\'Allo \'Allo!');
  * - Animation when clicked and only have a max of 2 flipped at one time
  */
 
+$(function(){
+
+  'use strict';
+});
