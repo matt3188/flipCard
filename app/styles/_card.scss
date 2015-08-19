@@ -6,9 +6,9 @@
 .flipper {
   transition: 0.4s;
 }
+#card-container,
 .flipper,
-.front, .back,
-#card-container {
+.front, .back {
   width: 100%;
   height: 100%;
 }
