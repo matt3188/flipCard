@@ -1,0 +1,63 @@
+/**
+ * Card
+ */
+
+.card,
+.flipper {
+  transition: 0.4s;
+}
+.flipper,
+.front, .back,
+#card-container {
+  width: 100%;
+  height: 100%;
+}
+
+.card {
+  display: inline-block;
+  text-align: center;
+  border-top: 1px solid;
+  border-right: 1px solid;
+  perspective: 1000;
+
+  color: #FFF;
+
+  &:nth-child(4n) {
+    border-right: 0;
+  }
+
+}
+
+&.flipped {
+  .flipper, .back{
+    transform: rotateY(180deg);
+  }
+}
+
+.flipper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  transform-style: preserve-3d;
+}
+
+.front, .back {
+  backface-visibility: hidden;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.front {
+  z-index: 2;
+  transform: rotateY(0deg);
+  background-color: #435;
+}
+
+.back {
+  transform: rotateY(180deg);
+  background-color: rgba(#435, 0.8);
+  padding: 20px 40px;
+}
