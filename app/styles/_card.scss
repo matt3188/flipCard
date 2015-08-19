@@ -17,9 +17,6 @@
   position: relative;
   float: left;
   perspective: 1000;
-
-
-  color: #FFF;
 }
 
 &.flipped {
@@ -57,4 +54,12 @@
   transform: rotateY(180deg);
   background-color: #439;
   padding: 20px 40px;
+}
+
+.icon {
+  color: #FFF;
+
+  &:before {
+    content: attr(data-icon);
+  }
 }
