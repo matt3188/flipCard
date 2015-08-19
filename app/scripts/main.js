@@ -1,6 +1,4 @@
 // jshint devel:true
-console.log('\'Allo \'Allo!');
-
 
 /**
  * TODO - Start with the basics
