@@ -16,7 +16,7 @@
 .card {
   position: relative;
   float: left;
-  perspective: 1000;
+  -webkit-perspective: 1000;
 }
 
 &.flipped {
@@ -24,6 +24,9 @@
   .flipper, .back{
     transform: rotateY(180deg);
   }
+}
+&.found {
+  transform: scale(0);
 }
 
 .flipper {
