@@ -14,21 +14,16 @@
 }
 
 .card {
-  display: inline-block;
-  text-align: center;
-  border-top: 1px solid;
-  border-right: 1px solid;
+  position: relative;
+  float: left;
   perspective: 1000;
 
+
   color: #FFF;
-
-  &:nth-child(4n) {
-    border-right: 0;
-  }
-
 }
 
 &.flipped {
+  z-index: 99;
   .flipper, .back{
     transform: rotateY(180deg);
   }
