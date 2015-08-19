@@ -39,11 +39,17 @@ $(function(){
       cardSize = 100/Math.sqrt(mix.length);
 
   for(i = 0; i < mix.length; i++) {
+
+    var icon = mix[i];
+    if(icon < 10) {
+      icon = '0' + icon;
+    }
+
     $('<div class="card" style="width:'+cardSize+'%; height:'+cardSize+'%;">' +
         '<div class="flipper">' +
           '<div class="front"></div>' +
           '<div class="back">' +
-            '<i class="glyphicon glyphicon-plus"></i>' +
+            '<i class="icon" data-icon="' + icon + '"></i>' +
           '</div>' +
         '</div>' +
       '</div>')
