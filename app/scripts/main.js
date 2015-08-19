@@ -60,6 +60,10 @@ $(function(){
 
   $card.on('click', function(e) {
     e.preventDefault();
+
+    $(this).addClass(activeClass);
+
+    var data = $(this).find('.icon').attr('data-icon');
   });
 
 });
