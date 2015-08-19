@@ -35,8 +35,8 @@ $(function(){
     obj.push(i);
   }
 
-      cardSize = 100/Math.sqrt(shu.length);
   var mix = shuffle($.merge(obj, obj)),
+      cardSize = 100/Math.sqrt(mix.length);
 
   for(i = 0; i < mix.length; i++) {
     $('<div class="card" style="width:'+cardSize+'%; height:'+cardSize+'%;">' +
