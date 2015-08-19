@@ -35,10 +35,10 @@ $(function(){
     obj.push(i);
   }
 
-  var shu = shuffle($.merge(obj, obj)),
       cardSize = 100/Math.sqrt(shu.length);
+  var mix = shuffle($.merge(obj, obj)),
 
-  for(i = 0; i < shu.length; i++) {
+  for(i = 0; i < mix.length; i++) {
     $('<div class="card" style="width:'+cardSize+'%; height:'+cardSize+'%;">' +
         '<div class="flipper">' +
           '<div class="front"></div>' +
@@ -46,7 +46,8 @@ $(function(){
             '<i class="glyphicon glyphicon-plus"></i>' +
           '</div>' +
         '</div>' +
-      '</div>').appendTo('#card-container');
+      '</div>')
+    .appendTo('#card-container');
   }
 
 });
