@@ -33,8 +33,8 @@ $(function(){
     obj.push(i);
   }
 
-  var mix = shuffle($.merge(obj, obj)),
-      cardSize = 100/Math.sqrt(mix.length);
+  $('.play').on('click', function() {
+
     var difficulty = '',
         level = $(this).attr('data-level');
 
@@ -51,58 +51,69 @@ $(function(){
 
     $('#card-container').addClass(difficulty);
 
-  for(i = 0; i < mix.length; i++) {
     var i,
         obj = [];
 
-    var icon = mix[i];
-    if(icon < 10) {
-      icon = '0' + icon;
+    for(i = 0; i < level; i++) {
+      obj.push(i);
     }
 
-    $('<div class="card" style="width:'+cardSize+'%; height:'+cardSize+'%;">' +
-        '<div class="flipper">' +
-          '<div class="front"></div>' +
-          '<div class="back">' +
-            '<i class="icon icon-' + icon + '" data-icon="' + icon + '"></i>' +
+    var mix = shuffle($.merge(obj, obj)),
+        cardSize = 100/Math.sqrt(mix.length);
+
+    for(i = 0; i < mix.length; i++) {
+
+      var icon = mix[i];
+
+      if(icon < 10) {
+        icon = '0' + icon;
+      }
+
+      $('<div class="card" style="width:'+cardSize+'%; height:'+cardSize+'%;">' +
+          '<div class="flipper">' +
+            '<div class="front"></div>' +
+            '<div class="back">' +
+              '<i class="icon icon-' + icon + '" data-icon="' + icon + '"></i>' +
+            '</div>' +
           '</div>' +
-        '</div>' +
-      '</div>')
-    .appendTo('#card-container');
-  }
-
-  var activeClass = 'flipped',
-      $cardContainer = $('#card-container'),
-      $card = $('.card'),
-      isAnimating = false;
-
-  $card.on('click', function(e) {
-    e.preventDefault();
-
-    if(isAnimating) return false;
-
-    $(this).addClass(activeClass);
-
-    var data = $(this).find('.icon').attr('data-icon');
-
-    if($cardContainer.find('.card.flipped').length > 1) {
-      isAnimating = true;
-      setTimeout(function() {
-
-        var thisCard = $('.card.flipped .icon[data-icon='+data+']');
-
-        if(thisCard.length > 1) {
-          isAnimating = false;
-          thisCard.parents('.card').toggleClass('found').on(transitionEvent, function() {
-            $(this).removeClass('flipped');
-          });
-        } else {
-          isAnimating = false;
-          $card.removeClass('flipped');
-        }
-
-      }, 500);
+        '</div>')
+      .appendTo('#card-container');
     }
+
+    var activeClass = 'flipped',
+        $cardContainer = $('#card-container'),
+        $card = $('.card'),
+        isAnimating = false;
+
+    $card.on('click', function(e) {
+      e.preventDefault();
+
+      if(isAnimating) { return false; }
+
+      $(this).addClass(activeClass);
+
+      var data = $(this).find('.icon').attr('data-icon');
+
+      if($cardContainer.find('.card.flipped').length > 1) {
+        isAnimating = true;
+        setTimeout(function() {
+
+          var thisCard = $('.card.flipped .icon[data-icon='+data+']');
+
+          if(thisCard.length > 1) {
+            isAnimating = false;
+            thisCard.parents('.card').toggleClass('found').on(transitionEvent, function() {
+              $(this).removeClass('flipped');
+            });
+          } else {
+            isAnimating = false;
+            $card.removeClass('flipped');
+          }
+
+        }, 500);
+      }
+    });
+  // End of play
   });
 
   function whichTransitionEvent(){
