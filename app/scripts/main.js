@@ -119,8 +119,8 @@ $(function(){
             isAnimating = false;
             $card.removeClass('flipped');
           }
+        }, 400);
 
-        }, 500);
       }
     });
   // End of play
