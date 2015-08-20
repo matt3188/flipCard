@@ -16,6 +16,8 @@ $(function(){
 
   'use strict';
 
+  startScreen('show');
+
   function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
     while (0 !== currentIndex) {
@@ -28,6 +30,12 @@ $(function(){
     return array;
   }
 
+  function startScreen(state) {
+    if(state === 'show') {
+      $('.start-screen').addClass('in');
+    } else if(state === 'hide') {
+      $('.start-screen').removeClass('in');
+    }
   }
 
   $('.play').on('click', function() {
@@ -47,6 +55,8 @@ $(function(){
     }
 
     $('#card-container').addClass(difficulty);
+
+    startScreen('hide');
 
     var i,
         obj = [];
