@@ -69,8 +69,11 @@ $(function(){
       setTimeout(function() {
 
         var thisCard = $('.card.flipped .icon[data-icon='+data+']');
+
         if(thisCard.length > 1) {
-          thisCard.parents('.card').addClass('found');
+          thisCard.parents('.card').toggleClass('found').on(transitionEvent, function() {
+            $(this).removeClass('flipped');
+          });
         } else {
           $card.removeClass('flipped');
         }
