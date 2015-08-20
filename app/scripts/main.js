@@ -1,4 +1,4 @@
-/* jshint devel:true, FastClick:false */
+// jshint devel:true
 
 /**
  * TODO - Start with the basics
@@ -9,10 +9,10 @@
  * - Add timer
  */
 
+var FastClick;
 FastClick.attach(document.body);
 
 $(function(){
-
 
   'use strict';
 
