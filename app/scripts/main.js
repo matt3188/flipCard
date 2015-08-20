@@ -1,4 +1,4 @@
-// jshint devel:true
+/* jshint devel:true, FastClick:false */
 
 /**
  * TODO - Start with the basics
@@ -8,7 +8,10 @@
  * - Animation when clicked and only have a max of 2 flipped at one time
  */
 
+FastClick.attach(document.body);
+
 $(function(){
+
 
   'use strict';
 
