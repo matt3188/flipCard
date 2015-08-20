@@ -24,3 +24,18 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
   color: #000;
   padding: 0.2em 0;
 }
+
+
+.start-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  transition: 0.4s;
+  text-align: center;
+
+  &.exit-left {
+    transform: translate3d(-100%,0,0);
+  }
+}

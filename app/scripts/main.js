@@ -32,9 +32,11 @@ $(function(){
 
   function startScreen(state) {
     if(state === 'show') {
-      $('.start-screen').addClass('in');
+      if($('.start-screen').hasClass('exit-left')) {
+        $('.start-screen').removeClass('exit-left');
+      }
     } else if(state === 'hide') {
-      $('.start-screen').removeClass('in');
+      $('.start-screen').addClass('exit-left');
     }
   }
 
