@@ -3,9 +3,10 @@
 /**
  * TODO - Start with the basics
  *
- * - Generate cards with symbols
- * - Randomise positions of cards
- * - Animation when clicked and only have a max of 2 flipped at one time
+ * - Create intro scene
+ * - Add differnet difficulties
+ * - Keep track of score
+ * - Add timer
  */
 
 FastClick.attach(document.body);
