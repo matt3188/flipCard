@@ -106,14 +106,14 @@ $(function(){
 
       if($cardContainer.find('.card.flipped').length > 1) {
         isAnimating = true;
+
         setTimeout(function() {
-
           var thisCard = $('.card.flipped .icon[data-icon='+data+']');
-
           if(thisCard.length > 1) {
-            isAnimating = false;
+            isAnimating = true;
             thisCard.parents('.card').toggleClass('found').on(transitionEvent, function() {
               $(this).removeClass('flipped');
+              isAnimating = false;
             });
           } else {
             isAnimating = false;
