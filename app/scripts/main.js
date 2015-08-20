@@ -38,7 +38,7 @@ $(function(){
     }
   }
 
-  $('.play').on('click', function() {
+  $('.btn-play').on('click', function() {
 
     var difficulty = '',
         level = $(this).attr('data-level');
