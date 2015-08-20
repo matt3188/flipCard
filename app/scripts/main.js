@@ -145,4 +145,15 @@ $(function(){
   }
   var transitionEvent = whichTransitionEvent();
 
+  /**
+   * Key events
+   */
+
+  $(document).keyup(function(e) {
+    if(e.keyCode === 27) {
+      startScreen('show');
+      $('#card-container').removeClass().empty();
+    }
+  });
+
 });
