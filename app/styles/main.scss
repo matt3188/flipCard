@@ -4,12 +4,13 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 @import "bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+@import 'variables';
 @import 'mixins';
 @import 'base';
+@import 'layout';
 @import 'list';
 @import 'icons';
 @import 'fonts';
-@import 'layout';
 @import 'heading';
 @import 'card';
 
