@@ -1,0 +1,21 @@
+/**
+ * List
+ */
+
+.list {
+  margin: 0;
+  padding: 0;
+
+  &.horizontal-list {
+
+    li {
+      display: inline-block;
+    }
+  }
+  &.vertical-list {
+
+    li {
+      display: block;
+    }
+  }
+}
