@@ -56,25 +56,31 @@ $(function(){
 
   var activeClass = 'flipped',
       $cardContainer = $('#card-container'),
-      $card = $('.card');
+      $card = $('.card'),
+      isAnimating = false;
 
   $card.on('click', function(e) {
     e.preventDefault();
+
+    if(isAnimating) return false;
 
     $(this).addClass(activeClass);
 
     var data = $(this).find('.icon').attr('data-icon');
 
     if($cardContainer.find('.card.flipped').length > 1) {
+      isAnimating = true;
       setTimeout(function() {
 
         var thisCard = $('.card.flipped .icon[data-icon='+data+']');
 
         if(thisCard.length > 1) {
+          isAnimating = false;
           thisCard.parents('.card').toggleClass('found').on(transitionEvent, function() {
             $(this).removeClass('flipped');
           });
         } else {
+          isAnimating = false;
           $card.removeClass('flipped');
         }
 
