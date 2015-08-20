@@ -41,22 +41,23 @@ $(function(){
   $('.btn-play').on('click', function() {
 
     var difficulty = '',
-        level = $(this).attr('data-level');
+        level = $(this).attr('data-level'),
+        selectedLevel = parseInt(level);
 
     // Game difficulty
-    if(level === 8) {
+    if(selectedLevel === 8) {
       difficulty = 'easy';
     }
-    else if(level === 18) {
+    else if(selectedLevel === 18) {
       difficulty = 'medium';
     }
-    else if(level === 32) {
+    else if(selectedLevel === 32) {
       difficulty = 'hard';
     }
 
-    $('#card-container').addClass(difficulty);
-
     startScreen('hide');
+
+    $('#card-container').addClass(difficulty);
 
     var i,
         obj = [];
