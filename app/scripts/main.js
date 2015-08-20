@@ -28,10 +28,6 @@ $(function(){
     return array;
   }
 
-  // 8 pairs
-  var level = 8,
-      i,
-      obj = [];
 
   for(i = 0; i < level; i++) {
     obj.push(i);
@@ -39,8 +35,25 @@ $(function(){
 
   var mix = shuffle($.merge(obj, obj)),
       cardSize = 100/Math.sqrt(mix.length);
+    var difficulty = '',
+        level = $(this).attr('data-level');
+
+    // Game difficulty
+    if(level === 8) {
+      difficulty = 'easy';
+    }
+    else if(level === 18) {
+      difficulty = 'medium';
+    }
+    else if(level === 32) {
+      difficulty = 'hard';
+    }
+
+    $('#card-container').addClass(difficulty);
 
   for(i = 0; i < mix.length; i++) {
+    var i,
+        obj = [];
 
     var icon = mix[i];
     if(icon < 10) {
