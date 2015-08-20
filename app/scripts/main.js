@@ -28,9 +28,6 @@ $(function(){
     return array;
   }
 
-
-  for(i = 0; i < level; i++) {
-    obj.push(i);
   }
 
   $('.play').on('click', function() {
