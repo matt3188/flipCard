@@ -4,4 +4,11 @@
 
 .hero {
   color: #FFF;
+  width: 90%;
+  margin: auto;
+
+  @media (min-width: 320px) {
+    width: 60%;
+    max-width: 550px;
+  }
 }
