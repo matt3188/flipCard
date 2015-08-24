@@ -9,29 +9,6 @@ $(function(){
 
   startScreen('show');
 
-  function shuffle(array) {
-    var currentIndex = array.length, temporaryValue, randomIndex;
-    while (0 !== currentIndex) {
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex -= 1;
-      temporaryValue = array[currentIndex];
-      array[currentIndex] = array[randomIndex];
-      array[randomIndex] = temporaryValue;
-    }
-    return array;
-  }
-
-  function startScreen(state) {
-    if(state === 'show') {
-      $('#card-container').removeClass().empty();
-      if($('.start-screen').hasClass('exit-left')) {
-        $('.start-screen').removeClass('exit-left');
-      }
-    } else if(state === 'hide') {
-      $('.start-screen').addClass('exit-left');
-    }
-  }
-
   $('.btn-play').on('click', function() {
 
     var difficulty = '',
@@ -50,7 +27,6 @@ $(function(){
     }
 
     startScreen('hide');
-
     $('#card-container').addClass(difficulty);
 
     var i,
@@ -122,6 +98,29 @@ $(function(){
   // End of play
   });
 
+  function shuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+    while (0 !== currentIndex) {
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+    }
+    return array;
+  }
+
+  function startScreen(state) {
+    if(state === 'show') {
+      $('#card-container').removeClass().empty();
+      if($('.start-screen').hasClass('exit-left')) {
+        $('.start-screen').removeClass('exit-left');
+      }
+    } else if(state === 'hide') {
+      $('.start-screen').addClass('exit-left');
+    }
+  }
+
   function whichTransitionEvent(){
     var t,
         el = document.createElement('fakeelement');
@@ -148,7 +147,6 @@ $(function(){
   $(document).keyup(function(e) {
     if(e.keyCode === 27) {
       startScreen('show');
-      $('#card-container').removeClass().empty();
     }
   });
 
