@@ -32,6 +32,7 @@ $(function(){
 
   function startScreen(state) {
     if(state === 'show') {
+      $('#card-container').removeClass().empty();
       if($('.start-screen').hasClass('exit-left')) {
         $('.start-screen').removeClass('exit-left');
       }
