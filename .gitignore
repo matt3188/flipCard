@@ -1,4 +1,8 @@
-node_modules
-dist
+# temporary files
 .tmp
+
+# packages
+node_modules
 bower_components
+
+dist
