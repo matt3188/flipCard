@@ -111,11 +111,9 @@ $(function(){
         setTimeout(function() {
           var thisCard = $('.card.flipped .icon[data-icon='+data+']');
           if(thisCard.length > 1) {
-            isAnimating = true;
-            thisCard.parents('.card').toggleClass('found').on(transitionEvent, function() {
-              $(this).removeClass('flipped');
-              isAnimating = false;
-            });
+            thisCard.parents('.card').toggleClass('found flipped');
+            isAnimating = false;
+
             if($('.card.found').length === selectedLevel * 2) {
               startScreen('show');
             }
