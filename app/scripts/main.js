@@ -116,6 +116,10 @@ $(function(){
               $(this).removeClass('flipped');
               isAnimating = false;
             });
+            if($('.card.found').length === selectedLevel * 2) {
+              startScreen('show');
+            }
+
           } else {
             isAnimating = false;
             $card.removeClass('flipped');
