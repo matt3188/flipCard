@@ -3,7 +3,8 @@
  */
 
 .card,
-.flipper {
+.flipper,
+#card-container {
   transition: 0.4s;
 }
 #card-container,
@@ -13,6 +14,13 @@
   height: 100%;
 }
 
+#card-container {
+  transform: translate3d(100%,0,0);
+
+  &.on-screen {
+    transform: translate3d(0,0,0);
+  }
+}
 .card {
   position: relative;
   float: left;
