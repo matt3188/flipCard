@@ -1,14 +1,5 @@
 // jshint devel:true
 
-/**
- * TODO - Start with the basics
- *
- * - Create intro scene
- * - Add differnet difficulties
- * - Keep track of score
- * - Add timer
- */
-
 var FastClick;
 FastClick.attach(document.body);
 
