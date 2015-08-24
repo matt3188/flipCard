@@ -27,7 +27,7 @@ $(function(){
     }
 
     startScreen('hide');
-    $('#card-container').addClass(difficulty);
+    $('#card-container').addClass('on-screen' + ' ' + difficulty);
 
     var i,
         obj = [];
@@ -112,7 +112,9 @@ $(function(){
 
   function startScreen(state) {
     if(state === 'show') {
-      $('#card-container').removeClass().empty();
+      $('#card-container').removeClass().one(transitionEvent, function() {
+        $('#card-container').empty();
+      });
       if($('.start-screen').hasClass('exit-left')) {
         $('.start-screen').removeClass('exit-left');
       }
