@@ -1,5 +1,8 @@
 {
+  "name": "FlipCard",
+  "version": "0.0.1",
   "private": true,
+  "author": "Matt Coleman <hello@matt-coleman.co.uk>",
   "devDependencies": {
     "autoprefixer-core": "^5.2.1",
     "grunt": "^0.4.5",
