@@ -18,4 +18,24 @@
       display: block;
     }
   }
+
+  &.difficulty-list {
+    width: 50%;
+    margin: auto;
+
+    li {
+      border-radius: 5px;
+      margin: 0 0 10px;
+      background-color: lighten($color-pink, 8%);
+      box-shadow: 1px 1px 3px darken($color-pink, 10%);
+    }
+    a {
+      border: 0;
+      width: 100%;
+      color: #FFF;
+      font-size: 2em;
+      font-family: $font-face-main;
+      text-shadow: 1px 1px 3px darken($color-pink, 10%);
+    }
+  }
 }
