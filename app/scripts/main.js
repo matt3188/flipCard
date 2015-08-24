@@ -94,6 +94,8 @@ $(function(){
     var activeClass = 'flipped',
         $cardContainer = $('#card-container'),
         $card = $('.card'),
+        $cardFound = $('.card.found'),
+        levelComplete = selectedLevel * 2,
         isAnimating = false;
 
     $card.on('click', function(e) {
@@ -114,7 +116,8 @@ $(function(){
             thisCard.parents('.card').toggleClass('found flipped');
             isAnimating = false;
 
-            if($('.card.found').length === selectedLevel * 2) {
+            // Once level has been beat
+            if($cardFound.length === levelComplete) {
               startScreen('show');
             }
 
