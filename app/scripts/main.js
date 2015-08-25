@@ -3,9 +3,19 @@
 var FastClick;
 FastClick.attach(document.body);
 
-$(function(){
+$(function() {
 
   'use strict';
+
+  $('.md-trigger').on('click', function() {
+    $(this).addClass('active');
+    $('.md-modal').addClass('md-show');
+  });
+
+  $('.md-close').on('click', function() {
+    $('.md-trigger').removeClass('active');
+    $('.md-modal').removeClass('md-show');
+  });
 
   startScreen('show');
 

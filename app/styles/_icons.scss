@@ -71,18 +71,30 @@
   right: 10px;
 }
 .icon-info {
+  cursor: pointer;
   border-radius: 50%;
   background-color: $color-turqoise;
   color: #FFF;
   width: 50px;
   height: 50px;
+  overflow: hidden;
   text-shadow: 1px 1px 3px darken($color-turqoise, 20%);
   box-shadow: 1px 1px 3px darken($color-space-grey, 10%);
 
   &:after {
-    content: '?';
     font-size: 2em;
     font-style: normal;
     font-family: $font-face-main;
   }
+  &:after {
+    content: '?';
+    top: 0;
+  }
+
+  &.active {
+    &:after {
+      top: -100%;
+    }
+  }
+
 }

@@ -31,7 +31,7 @@
 
     <div class="start-screen">
 
-      <div class="info-container"><i class="icon icon-info"></i></div>
+      <div class="info-container"><i class="icon icon-info md-trigger" data-modal="modal-8"></i></div>
 
       <h1 class="heading main-heading">Welcome to<span class="larger">flipCard</span></h1>
 
@@ -43,7 +43,30 @@
           <li><a class="btn btn-play" data-level="32">Hard</a></li>
         </ul>
       </div>
+
+      <div class="md-modal-container">
+
+        <div class="md-modal md-effect-8" id="modal-8">
+          <div class="md-content">
+            <h3>Information</h3>
+            <div class="md-inner-content">
+              <p>This is a modal window. You can do the following things with it:</p>
+              <ul>
+                <li><strong>Read:</strong> Modal windows will probably tell you something important so don't forget to read what it says.</li>
+                <li><strong>Look:</strong> modal windows enjoy a certain kind of attention; just look at it and appreciate its presence.</li>
+                <li><strong>Close:</strong> click on the button below to close the modal.</li>
+              </ul>
+              <button class="btn md-close">Got it!</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="md-overlay"></div>
+
+      </div>
+
     </div>
+
 
     <div id="card-container"></div>
 
