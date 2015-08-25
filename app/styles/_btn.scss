@@ -3,8 +3,24 @@
  */
 
 .btn {
+  outline: 0;
 
   &.btn-play {
+  }
+
+  &.got-it {
+    width: 60%;
+    padding: 10px;
+    margin: 10px auto;
+    font-size: 1.5em;
+    font-family: $font-face-main;
+    background-color: darken($color-turqoise, 15%);
+
+    &:hover,
+    &:active {
+      color: #fff;
+      outline: 0;
+    }
   }
 
 }
