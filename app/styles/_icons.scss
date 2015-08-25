@@ -32,6 +32,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+// Card icons (numerical for ease of use)
 .icon-00:before { content: '\e800'; }
 .icon-01:before { content: '\e801'; }
 .icon-02:before { content: '\e802'; }
@@ -64,6 +65,9 @@
 .icon-29:before { content: '\e81d'; }
 .icon-30:before { content: '\e81e'; }
 .icon-31:before { content: '\e81f'; }
+
+// Other icons
+.icon-beer:before { content: '\e820'; }
 
 .info-container {
   position: absolute;
