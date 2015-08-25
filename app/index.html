@@ -50,13 +50,20 @@
           <div class="md-content">
             <h3>Information</h3>
             <div class="md-inner-content">
-              <p>This is a modal window. You can do the following things with it:</p>
-              <ul>
-                <li><strong>Read:</strong> Modal windows will probably tell you something important so don't forget to read what it says.</li>
-                <li><strong>Look:</strong> modal windows enjoy a certain kind of attention; just look at it and appreciate its presence.</li>
-                <li><strong>Close:</strong> click on the button below to close the modal.</li>
-              </ul>
-              <button class="btn md-close">Got it!</button>
+              <p>Welcome to my version of the popular memory game Pairs. The aim of the game is simple, match the icons underneath the tiles. Click on a tile to reveal the icon underneth, then find it's partner. Find of the them to win the game.</p>
+              <button class="btn got-it md-close">Got it!</button>
+
+              <!-- Shameless donation button -->
+              <p class="donation">Have you enjoyed playing?</p>
+              <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+                ">
+                <button class="btn got-it" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">Buy me a beer <i class="icon icon-inline icon-beer"></i></button>
+                <!-- <input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online."> -->
+                <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+              </form>
+
             </div>
           </div>
         </div>

@@ -6,6 +6,10 @@
   display: table-cell;
   vertical-align: middle;
   text-align: center;
+
+  &.icon-inline {
+    display: inline-block;
+  }
 }
 
 [class^="icon-"]:before, [class*=" icon-"]:before {
