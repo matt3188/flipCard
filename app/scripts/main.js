@@ -18,7 +18,7 @@ $(function() {
   });
 
   $('.btn-beer').on('click', function() {
-    $(this).addClass('loading')
+    $(this).addClass('loading');
     $('.icon-beer').toggleClass('icon-beer icon-arrows-cw');
   });
 
