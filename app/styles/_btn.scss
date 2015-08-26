@@ -17,7 +17,7 @@
   }
 
   &.got-it {
-    width: 60%;
+    min-width: 60%;
     margin: 10px auto;
     background-color: darken($color-turqoise, 15%);
   }
