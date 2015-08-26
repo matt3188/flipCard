@@ -451,7 +451,8 @@ module.exports = function (grunt) {
     'modernizr',
     'filerev',
     'usemin',
-    'htmlmin'
+    'htmlmin',
+    'buildcontrol:pages'
   ]);
 
   grunt.registerTask('default', [
