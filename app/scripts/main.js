@@ -17,6 +17,11 @@ $(function() {
     $('.md-modal').removeClass('md-show');
   });
 
+  $('.btn-beer').on('click', function() {
+    $(this).addClass('loading')
+    $('.icon-beer').toggleClass('icon-beer icon-arrows-cw');
+  });
+
   startScreen('show');
 
   $('.btn-play').on('click', function() {
