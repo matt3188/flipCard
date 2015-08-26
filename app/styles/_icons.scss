@@ -72,6 +72,8 @@
 
 // Other icons
 .icon-beer:before { content: '\e820'; }
+.icon-arrows-cw:before { content: '\e821'; }
+
 
 .info-container {
   position: absolute;
@@ -105,4 +107,11 @@
     }
   }
 
+}
+
+// Loading spinner
+.icon-arrows-cw {
+  .loading & {
+    animation: clockwiseSpin 0.5s linear infinite;
+  }
 }
