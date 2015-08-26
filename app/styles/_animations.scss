@@ -1,0 +1,9 @@
+/**
+ * Animations
+ */
+
+@keyframes clockwiseSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
