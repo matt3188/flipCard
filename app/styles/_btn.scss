@@ -4,23 +4,22 @@
 
 .btn {
   outline: 0;
+  padding: 10px;
+  font-size: 1.5em;
+  font-family: $font-face-main;
 
-  &.btn-play {
+  &:active,
+  &:focus,
+  &:hover,
+  &:focus:active {
+    outline: 0;
+    color: #fff;
   }
 
   &.got-it {
     width: 60%;
-    padding: 10px;
     margin: 10px auto;
-    font-size: 1.5em;
-    font-family: $font-face-main;
     background-color: darken($color-turqoise, 15%);
-
-    &:hover,
-    &:active {
-      color: #fff;
-      outline: 0;
-    }
   }
 
 }
