@@ -92,13 +92,11 @@
   box-shadow: 1px 1px 3px darken($color-space-grey, 10%);
 
   &:after {
+    content: '?';
+    top: 0;
     font-size: 2em;
     font-style: normal;
     font-family: $font-face-main;
-  }
-  &:after {
-    content: '?';
-    top: 0;
   }
 
   &.active {
