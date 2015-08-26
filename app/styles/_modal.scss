@@ -24,14 +24,20 @@
   z-index: 2000;
   visibility: hidden;
   backface-visibility: hidden;
+  perspective: 1300px;
 
   @media all and (min-width: 415px) {
     top: 30%;
   }
-}
 
-.md-show {
-  visibility: visible;
+  &.md-show {
+    visibility: visible;
+
+    .md-content {
+      transform: rotateY(0deg);
+      opacity: 1;
+    }
+  }
 }
 
 .md-overlay {
@@ -56,11 +62,16 @@
  */
 
 .md-content {
+  transform-style: preserve-3d;
+  transform: rotateY(-70deg);
+  transition: all 0.3s;
+  opacity: 0;
+
+  position: relative;
+  margin: 0 auto;
   color: #fff;
   background: $color-turqoise;
-  position: relative;
   border-radius: 3px;
-  margin: 0 auto;
 
   h3 {
     margin: 0;
@@ -80,25 +91,8 @@
     font-size: 1.15em;
   }
 
-
   .donation {
     margin: 10px 0 0;
     font-size: 1em;
   }
-}
-
-.md-effect-8.md-modal {
-  perspective: 1300px;
-}
-
-.md-effect-8 .md-content {
-  transform-style: preserve-3d;
-  transform: rotateY(-70deg);
-  transition: all 0.3s;
-  opacity: 0;
-}
-
-.md-show.md-effect-8 .md-content {
-  transform: rotateY(0deg);
-  opacity: 1;
 }
