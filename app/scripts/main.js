@@ -22,7 +22,7 @@ $(function() {
     $('.icon-beer').toggleClass('icon-beer icon-arrows-cw');
   });
 
-  startScreen('show');
+  screenSelector('show');
 
   $('.btn-play').on('click', function() {
 
@@ -45,7 +45,7 @@ $(function() {
       timer *= level * 6;
     }
 
-    startScreen('hide');
+    screenSelector('hide');
     $('#card-container').addClass('on-screen' + ' ' + difficulty);
 
     var i,
@@ -101,9 +101,9 @@ $(function() {
             thisCard.parents('.card').toggleClass('found flipped');
             isAnimating = false;
 
-            // Once level has been beat
+            // Once all cards have been found
             if($('.card.found').length === levelComplete) {
-              startScreen('show');
+              screenSelector('show');
             }
 
           } else {
@@ -137,7 +137,7 @@ $(function() {
     return array;
   }
 
-  function startScreen(state) {
+  function screenSelector(state) {
     if(state === 'show') {
       $('#card-container').removeClass().one(transitionEvent, function() {
         $('#card-container').empty();
@@ -194,7 +194,7 @@ $(function() {
 
   $(document).keyup(function(e) {
     if(e.keyCode === 27) {
-      startScreen('show');
+      screenSelector('show');
     }
   });
 
