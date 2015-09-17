@@ -7,3 +7,12 @@
     transform: rotate(360deg);
   }
 }
+
+@keyframes timer {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}

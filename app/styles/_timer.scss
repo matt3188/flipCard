@@ -1,0 +1,11 @@
+/**
+ * Timer
+ */
+
+.timer {
+  height: 5px;
+  position: absolute;
+  top: 0;
+  background-color: $color-pink;
+  z-index: 1;
+}
