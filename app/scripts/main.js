@@ -27,18 +27,22 @@ $(function() {
   $('.btn-play').on('click', function() {
 
     var difficulty = '',
+        timer = 1000,
         level = $(this).attr('data-level'),
         selectedLevel = parseInt(level);
 
     // Game difficulty
     if(selectedLevel === 8) {
       difficulty = 'easy';
+      timer *= level * 4;
     }
     else if(selectedLevel === 18) {
       difficulty = 'medium';
+      timer *= level * 5;
     }
     else if(selectedLevel === 32) {
       difficulty = 'hard';
+      timer *= level * 6;
     }
 
     startScreen('hide');
@@ -110,7 +114,15 @@ $(function() {
 
       }
     });
-  // End of play
+    // End of play
+
+    // Add timer
+    $('<i class="timer"></i>')
+    .prependTo($cardContainer)
+    .css({'animation' : 'timer ' + timer + 'ms linear'})
+    .one(animationEvent, function() {
+      screenSelector('show');
+    });
   });
 
   function shuffle(array) {
