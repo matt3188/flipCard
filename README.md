@@ -10,7 +10,7 @@ This is a working progress so any comments or thoughts are very welcome.
 - Create an intro scene
 - ~~Add different difficulties~~
 - Keep track of users scores (number of wrong/correct guesses, number of times lost/won)
-- Add a timer
+- ~~Add a timer~~
 - Add Navigation to go back to home screen
 - Add 'end of game' screen
 - ~~Add some styling~~
