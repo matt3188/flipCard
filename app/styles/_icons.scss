@@ -73,7 +73,7 @@
 // Other icons
 .icon-beer:before { content: '\e820'; }
 .icon-arrows-cw:before { content: '\e821'; }
-
+.icon-cancel:before { content: '\e822'; }
 
 .info-container {
   position: absolute;
@@ -107,8 +107,16 @@
 
 }
 
+.icon-cancel {
+  @extend .info-container;
+  cursor: pointer;
+  font-size: 2em;
+  z-index: 1;
+}
+
 // Loading spinner
 .icon-arrows-cw {
+
   .loading & {
     animation: clockwiseSpin 0.5s linear infinite;
   }
