@@ -8,7 +8,9 @@ This is a working progress so any comments or thoughts are very welcome.
 
 ### TODO
 - Create an intro scene
-- Add different difficulties
+- ~~Add different difficulties~~
 - Keep track of users scores (number of wrong/correct guesses, number of times lost/won)
 - Add a timer
-- Add some styling
+- Add Navigation to go back to home screen
+- Add 'end of game' screen
+- ~~Add some styling~~
