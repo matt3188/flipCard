@@ -1,15 +1,15 @@
 language: node_js
 sudo: false
 node_js:
-  - 'stable'
+  - stable
 
 before_script:
-- npm install grunt-cli -g
+  - npm install grunt-cli -g
 
 install:
-- npm install -g bower
-- bower install
-- npm install
+  - npm install -g bower
+  - bower install
+  - npm install
 script: grunt
 
 after_success:
@@ -18,4 +18,4 @@ after_success:
 env:
   global:
   - GH_REF: github.com/matt3188/flipCard
-  - secure: YD0rgbykCttZRBBhCM7aPUA7BFWFrcvItAWTlVKTXlxiN2SWg1m7dOaL71HTXnVPPfSrtLa070h5I8b2MldN0vt9O2WQyQiYePYrHdS2jRme5VoULtM6/ABY78QQAcVp5/vllnFPGZdgUwUD/QyhF5yb13DtGRU71jiJbZLgkSYt4PyOKlHUSDYu+tWnpmcgfMmNgykPa+U8ju9JS2UNW7yUmELmpFxt/iBlDsEkTUIwb6n6CJdNbUfzNQBULFlV8Aj3l2I3gG4ZYen/t0mW3auBNbqqxB3gsGMDpQ3/e2BRXckPVz/jbi+ady24s/CfrMC1jpYySDhhT8DVxlJZKH6meGob9ibZZnZh+V4LWuDRbaOGHQl6EYzpjhtSkQvFCpjeBrL910cvpoUn2sC4x+xWHPYsKJNicVLEtJ3OVtTZHpWzitipMrQvW3WyDm3jx0MuBaYZ9cz21/Q9CR5NYM2mZvVvWdgresOBPhu8EFyAwEIcZqGxW+waG8nCDaki+xoiCNBFV7qOHPNbynqyFnPxDytfp+5Aj03xHplNpC7OzSEGJM+JMCNjuz0zlV+dpcN5nbF/9SKZEDOVkEpmU7pUMoqKk+4NWZTM8dk94rzBQ3L9wpon5rEDpqkUXPTw5cKq7hjDJn9kQkL7NFZkgaks6lZtPdWktGrTlsyoocs
+  - secure: paUc4tjen2a3uG+u4czlnRt/lo2leyd8WT885Aou7l5zFTyfbBgzXeZUEOO5lDuqFy6bxZbSQfyMDPeUg76M0zLi/loAuCbMoO3ABYog66pwhDZWoLsTO+hfgCdGDepF2rMhwbV4/LLmxyGHlzNLsYZZUuTifLrYFauJCmTMvcFkX1usJJQkmXc0uka6XPV/0Pl/HFnbWmAAixUaASWb81Y+c6yj5L+Q2i3qrgAGE/o/kRHlRCCj1v2J4qnDlqGTkvO9rnzB4bhJAl81bqJabDX4/b1lgRJ+yhK8OgHMiWjwEO+0hvBwPDtNzP/nk+grnQ9TcTfTWc+LbZYlXc+w/hRk/HDHi60Pi60x48/O5V++m0/U4ScaVk4GrnGueKuNvwOXsmdHhMplNXqi12uF73hpSZ/fzh9AWEqNDJcVtdV4iEIneEnAyzH7qVQuBQfHYCdN2qv8NoifFkcaBKy3rtoiD9Qvh+w4yiSvTJ8SmBUj953UfiEi0cq5enn2Lm2wbqF25sfVZrmBJww4zr3zj3dnZjXdd0XIIYey3xGT8mJ/aIZAmcqxMgskVdDcSrL1ow1ffL/FWR43ixgsqcqMyFdRH+99z65pz5KOM3O01u/3+X+lOgNFqsTxkkLAiSVFg0n8uqUx8n408hJRhm3BNgDNt1YLdXfZ+rZDKhKHlRw=
