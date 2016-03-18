@@ -7,6 +7,26 @@ $(function() {
 
   'use strict';
 
+  // Splash screen
+  function onReady(callback) {
+    var intervalID = window.setInterval(checkReady, 1000);
+    function checkReady() {
+      if (document.getElementsByTagName('body')[0] !== undefined) {
+        window.clearInterval(intervalID);
+        callback.call(checkReady);
+      }
+    }
+  }
+
+  function show(id, value) {
+    document.getElementById(id).className += value ? ' showme' : ' hideme';
+  }
+
+  onReady(function() {
+    show('page', true);
+    show('loading', false);
+  });
+
   $('.md-trigger').on('click', function() {
     $(this).addClass('active');
     $('.md-modal').addClass('md-show');
@@ -118,10 +138,10 @@ $(function() {
 
     // Add timer
     $('<i class="timer"></i>')
-    .prependTo($cardContainer)
-    .css({'animation' : 'timer ' + timer + 'ms linear'})
-    .one(animationEvent, function() {
-      screenSelector('show');
+      .prependTo($cardContainer)
+      .css({'animation' : 'timer ' + timer + 'ms linear'})
+      .one(animationEvent, function() {
+        screenSelector('show');
     });
   });
 
