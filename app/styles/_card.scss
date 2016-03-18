@@ -58,16 +58,16 @@
 .front {
   z-index: 2;
   transform: rotateY(0deg);
-  background-color: #435;
+  background-color: $color-purple;
 }
 
 .back {
   display: table;
   transform: rotateY(180deg);
-  background-color: #439;
+  background-color: $color-light-purple;
 
   .icon {
-    color: #FFF;
+    color: white;
     font-size: 2.5em;
 
     @media all and (min-width: 415px) {
