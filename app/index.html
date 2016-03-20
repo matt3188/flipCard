@@ -1,17 +1,27 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js" lang="">
   <head>
     <meta charset="utf-8">
-    <title>flipCard</title>
-    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A pairs card game. flipCard is a memory game built as a web app.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="canonical" href="https://matt3188.github.io/flipCard/">
+    <title>flipCard</title>
+    <link rel="manifest" href=manifest.json>
 
-    <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content=yes>
+    <meta name="application-name" content="flipCard">
+    <link rel="icon" sizes="192x192" href=/images/touch/flipCard_192.png>
+
+    <meta name="apple-mobile-web-app-capable" content=yes>
+    <meta name="apple-mobile-web-app-status-bar-style" content=black-translucent>
+    <meta name="apple-mobile-web-app-title" content="flipCard">
+    <link rel="apple-touch-icon" href=/images/touch/flipCard_192.png>
+
+    <meta name="msapplication-TileImage" content=/images/touch/flipCard_144.png>
+    <meta name="msapplication-TileColor" content=#414B57>
+    <meta name="theme-color" content=#414B57>
+
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
@@ -112,15 +122,21 @@
 
 
     <!-- build:js scripts/main.js -->
-    <script>
-      // Let's register our serviceworker
-      navigator.serviceWorker.register('sw.js', {
-        // The scope cannot be parent to the script url
-        scope: './'
-      });
-    </script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
+
+    <script>
+      if('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js', { scope: '/' })
+          .then(function(registration) {
+            console.log("Service Worker Registered");
+          });
+
+        navigator.serviceWorker.ready.then(function(registration) {
+          console.log("Service Worker Ready");
+        });
+      }
+    </script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
