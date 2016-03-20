@@ -23,6 +23,11 @@
 @import 'card';
 @import 'timer';
 
+body {
+  position: relative;
+  margin-top: 40px;
+  background-color: $color-space-grey;
+}
 
 .start-screen {
   position: absolute;
